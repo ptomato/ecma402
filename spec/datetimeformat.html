@@ -208,8 +208,8 @@
           1. For each _property_ shown in <emu-xref href="#table-datetimeformat-components"></emu-xref>, do
             1. Let _optionsProp_ be _options_.[[&lt;_property_&gt;]].
             1. Let _formatProp_ be _format_.[[&lt;_property_&gt;]].
-            1. If _optionsProp_ is *undefined* and _formatProp_ is not *undefined*, then decrease _score_ by _additionPenalty_.
-            1. Else if _optionsProp_ is not *undefined* and _formatProp_ is *undefined*, then decrease _score_ by _removalPenalty_.
+            1. If _optionsProp_ is *undefined* and _formatProp_ is not *undefined* and _formatProp_ is not `0`, then decrease _score_ by _additionPenalty_.
+            1. Else if _optionsProp_ is not *undefined* and _optionsProp_ is not `0` and _formatProp_ is *undefined*, then decrease _score_ by _removalPenalty_.
             1. Else if _optionsProp_ ≠ _formatProp_,
               1. If _property_ is `"fractionalSecondDigits"`, then
                 1. Let _values_ be &laquo; `0`, `1`, `2`, `3` &raquo;.
